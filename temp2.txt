@@ -8,3 +8,6 @@ screen_kill_func() {
   File "/home/feduser/miniconda3/envs/nvidia_flare_test_git/lib/python3.9/multiprocessing/managers.py", line 825, in _callmethod
     raise convert_to_error(kind, result)
 KeyError: 'run_status'
+
+
+nvflare-nightly               2.4.0rc3+6.gfa4290fc /home/feduser/FL_LKEB_QUANTIB/NVFlare
