@@ -1,0 +1,4 @@
+screen_kill_func() {
+  local session_name="$1"
+  screen -X -S "$session_name" quit
+}
