@@ -1,0 +1,64 @@
+(base) feduser@pve11-fed11:~/SHARED-DIR/FL_LKEB_QUANTIB/FEDERATED_LEARNING_TEST/unet2023$  cd /home/feduser/SHARED-DIR/FL_LKEB_QUANTIB/FEDERATED_LEARNING_TEST/unet2023 ; /usr/bin/env /bin/python3 /home/feduser/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 59093 -- /home/feduser/SHARED-DIR/FL_LKEB_QUANTIB/FEDERATED_LEARNING_TEST/unet2023/python_FL_simulator.py simulator unet-sim/jobs/unet_fedavg --threads 1 --n_client 1 
+/home/feduser/SHARED-DIR/FL_LKEB_QUANTIB/FEDERATED_LEARNING_TEST/unet2023/python_FL_simulator.py
+Simulator workspace is not provided. Set it to the default location: /srv/nfs-share/feduser/SHARED-DIR/FL_LKEB_QUANTIB/FEDERATED_LEARNING_TEST/unet2023/simulator_workspace
+2023-10-16 13:10:41,477 - SimulatorRunner - INFO - Create the Simulator Server.
+2023-10-16 13:10:41,483 - CoreCell - INFO - server: creating listener on tcp://0:41745
+2023-10-16 13:10:41,895 - CoreCell - INFO - server: created backbone external listener for tcp://0:41745
+2023-10-16 13:10:41,895 - ConnectorManager - INFO - 14570: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2023-10-16 13:10:41,920 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:64261] is starting
+2023-10-16 13:10:42,427 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:64261
+2023-10-16 13:10:42,428 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE tcp://0:41745] is starting
+2023-10-16 13:10:42,543 - SimulatorRunner - INFO - Deploy the Apps.
+2023-10-16 13:10:42,544 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 38835
+2023-10-16 13:10:43,037 - SimulatorRunner - INFO - Create the simulate clients.
+2023-10-16 13:10:43,049 - ClientManager - INFO - Client: New client site-1@192.168.1.141 joined. Sent token: 6fc5d5eb-5bb4-4f4d-bc2f-04230a821ed3.  Total clients: 1
+2023-10-16 13:10:43,060 - FederatedClient - INFO - Successfully registered client:site-1 for project simulator_server. Token:6fc5d5eb-5bb4-4f4d-bc2f-04230a821ed3 SSID:
+2023-10-16 13:10:43,081 - SimulatorRunner - INFO - Set the client status ready.
+2023-10-16 13:10:43,103 - SimulatorRunner - INFO - Deploy and start the Server App.
+2023-10-16 13:10:43,130 - Cell - INFO - Register blob CB for channel='server_command', topic='*'
+2023-10-16 13:10:43,148 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
+2023-10-16 13:10:43,170 - ServerCommandAgent - INFO - ServerCommandAgent cell register_request_cb: server.simulate_job
+
+Unable to handle command: simulator due to: 'run_status' 
+
+Traceback (most recent call last):
+  File "/srv/nfs-share/feduser/SHARED-DIR/FL_LKEB_QUANTIB/NVFlare/nvflare/cli.py", line 172, in run
+    handlers[sub_cmd](prog_args)
+  File "/srv/nfs-share/feduser/SHARED-DIR/FL_LKEB_QUANTIB/NVFlare/nvflare/cli.py", line 83, in handle_simulator_cmd
+    status = run_simulator(simulator_args)
+  File "/srv/nfs-share/feduser/SHARED-DIR/FL_LKEB_QUANTIB/NVFlare/nvflare/private/fed/app/simulator/simulator.py", line 44, in run_simulator
+    run_status = simulator.run()
+  File "/srv/nfs-share/feduser/SHARED-DIR/FL_LKEB_QUANTIB/NVFlare/nvflare/private/fed/app/simulator/simulator_runner.py", line 342, in run
+    run_status = return_dict["run_status"]
+  File "<string>", line 2, in __getitem__
+  File "/home/feduser/SHARED-DIR/miniconda3/envs/nvidia_flare_test_git2/lib/python3.9/multiprocessing/managers.py", line 825, in _callmethod
+    raise convert_to_error(kind, result)
+KeyError: 'run_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/feduser/SHARED-DIR/miniconda3/envs/nvidia_flare_test_git2/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/feduser/SHARED-DIR/miniconda3/envs/nvidia_flare_test_git2/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/feduser/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/feduser/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/feduser/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/feduser/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/feduser/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/feduser/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/home/feduser/SHARED-DIR/FL_LKEB_QUANTIB/FEDERATED_LEARNING_TEST/unet2023/python_FL_simulator.py", line 11, in <module>
+    sys.exit(main())
+  File "/srv/nfs-share/feduser/SHARED-DIR/FL_LKEB_QUANTIB/NVFlare/nvflare/cli.py", line 211, in main
+    run("nvflare")
+  File "/srv/nfs-share/feduser/SHARED-DIR/FL_LKEB_QUANTIB/NVFlare/nvflare/cli.py", line 186, in run
+    if prog_args.debug:
+AttributeError: 'Namespace' object has no attribute 'debug'
+(base) feduser@pve11-fed11:~/SHARED-DIR/FL_LKEB_QUANTIB/FEDERATED_LEARNING_TEST/unet2023$ 
